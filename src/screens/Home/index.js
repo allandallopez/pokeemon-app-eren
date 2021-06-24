@@ -2,9 +2,9 @@ import React from 'react'
 import { View, Text, StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native'
 
 import { font } from '@utils'
-import { HomeBackground, PokeCorner } from '@svgImages'
+import { HomeBackground } from '@svgImages'
 
-const HomePage = () => {
+const HomePage = ({ navigation }) => {
    return (
       <View style={styles.container}>
          <Image
@@ -19,7 +19,9 @@ const HomePage = () => {
          {/* =================== */}
 
          <View style={styles.cardWrapper}>
-            <TouchableOpacity style={{ ...styles.cardMenu, backgroundColor: '#2ECC71' }}>
+            <TouchableOpacity
+               onPress={() => navigation.navigate('Pokedex')}
+               style={{ ...styles.cardMenu, backgroundColor: '#2ECC71' }}>
                <Image
                   source={require('@assets/images/lit-corner-poke.png')}
                   style={{ position: 'absolute', left: 0, top: 0 }}
@@ -48,7 +50,7 @@ const HomePage = () => {
             </TouchableOpacity>
          </View>
          <View style={{ ...styles.cardWrapper, paddingTop: 20 }}>
-            <TouchableOpacity style={{ ...styles.cardMenu, backgroundColor: '#F1C40F' }}>
+            <TouchableOpacity style={{ ...styles.cardMenu, backgroundColor: '#ff9f43' }}>
                <Image
                   source={require('@assets/images/lit-corner-poke.png')}
                   style={{ position: 'absolute', left: 0, top: 0 }}
@@ -62,7 +64,7 @@ const HomePage = () => {
                />
             </TouchableOpacity>
 
-            <TouchableOpacity style={{ ...styles.cardMenu, backgroundColor: '#F1C40F' }}>
+            <TouchableOpacity style={{ ...styles.cardMenu, backgroundColor: '#ff793f' }}>
                <Image
                   source={require('@assets/images/lit-corner-poke.png')}
                   style={{ position: 'absolute', left: 0, top: 0 }}
