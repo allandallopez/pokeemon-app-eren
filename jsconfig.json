@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+     "@svgIcons": ["src/assets/icons/svg"],
+     "@screens": ["src/screens"],
+     "@routes": ["src/routes"],
+     "@services": ["src/services"],
+     "@utils": ["src/utils"],
+     "@components": ["src/components"],
+     "@svgImages": ["src/assets/images"],
+    }
+  }
+}

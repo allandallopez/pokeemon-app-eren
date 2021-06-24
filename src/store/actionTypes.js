@@ -1,0 +1,1 @@
+export const PROPERTY_TEST = 'PROPERTY_TEST'
