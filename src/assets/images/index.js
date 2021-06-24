@@ -1,1 +1,2 @@
-export { default as PropertyBackground } from './PropertyBackground'
+export { default as HomeBackground } from './HomeBackground'
+export { default as PokeCorner } from './PokeCorner'
