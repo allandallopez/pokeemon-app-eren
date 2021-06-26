@@ -32,7 +32,7 @@ const BaseStats = ({ detailPokedex }) => {
                         }}>
                         <View
                            style={{
-                              width: `${(item.base_stat / 100) * 100}%`,
+                              width: `${(item.base_stat / 100) * 80}%`,
                               height: 8,
                               borderRadius: 36,
                               backgroundColor: '#3498db',
