@@ -11,28 +11,23 @@ const BaseStats = ({ detailPokedex }) => {
          {detailPokedex.isLoading ? null : (
             <Fragment>
                {detailPokedex.data?.stats.map((item) => (
-                  <View
-                     style={{ width: '100%', flexDirection: 'row', justifyContent: 'space-between', marginBottom: 25 }}>
-                     <View style={{ width: 60 }}>
-                        <Text
-                           numberOfLines={1}
-                           ellipsizeMode="tail"
-                           style={{ ...styles.headerTitle, fontFamily: font.PoppinsMedium, marginBottom: 0 }}>
-                           {item.stat.name.toUpperCase()}
-                        </Text>
-                     </View>
+                  <View style={{ width: '100%', marginBottom: 25 }}>
+                     <Text style={{ ...styles.headerTitle, fontFamily: font.PoppinsBold, marginBottom: 10 }}>
+                        {item.stat.name.toUpperCase()}
+                     </Text>
 
                      <View
                         style={{
-                           width: '80%',
+                           width: '100%',
                            height: 8,
                            borderRadius: 36,
                            backgroundColor: '#BDF5F1',
                            marginBottom: 6,
+                           overflow: 'hidden',
                         }}>
                         <View
                            style={{
-                              width: `${(item.base_stat / 100) * 80}%`,
+                              width: `${(item.base_stat / 100) * 100}%`,
                               height: 8,
                               borderRadius: 36,
                               backgroundColor: '#3498db',
