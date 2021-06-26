@@ -1,0 +1,42 @@
+import * as React from 'react'
+import Svg, { Path, Defs, Pattern, Use, Image } from 'react-native-svg'
+
+import PropTypes from 'prop-types'
+
+function HeightIcon({ width, height, ...props }) {
+   return (
+      <Svg
+         width={width}
+         height={height}
+         viewBox="0 0 25 25"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlnsXlink="http://www.w3.org/1999/xlink"
+         {...props}>
+         <Path fill="url(#prefix__pattern0)" d="M0 0h25v25H0z" />
+         <Defs>
+            <Pattern id="prefix__pattern0" patternContentUnits="objectBoundingBox" width={1} height={1}>
+               <Use xlinkHref="#prefix__image0" transform="scale(.005)" />
+            </Pattern>
+            <Image
+               id="prefix__image0"
+               width={200}
+               height={200}
+               xlinkHref="data:image/png;base64,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"
+            />
+         </Defs>
+      </Svg>
+   )
+}
+
+HeightIcon.propTypes = {
+   width: PropTypes.number,
+   height: PropTypes.number,
+}
+
+HeightIcon.defaultProps = {
+   width: 25,
+   height: 25,
+}
+
+export default HeightIcon

@@ -1,26 +1,26 @@
 import React, { useContext } from 'react'
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 
-import { PokedexContext } from '@context/PokedexContext'
+import { font, whichStatement } from '@utils'
 
-import { font } from '@utils'
-
-const CardPokeCorner = ({ title, bgColor, imageURL, type = 1, pokeID }) => {
-   const pokedexContext = useContext(PokedexContext)
+const CardPokeCorner = ({ title, imageURL, type = 1, pokeID, onNavigate }) => {
    return (
-      <View
-         style={{ ...styles.cardPoke, backgroundColor: type !== 1 ? '#ffffff' : pokedexContext.whichBgColor(pokeID) }}>
+      <TouchableOpacity
+         onPress={onNavigate}
+         style={{ ...styles.cardPoke, backgroundColor: type !== 1 ? '#ffffff' : whichStatement.whichBgColor(pokeID) }}>
          {type !== 1 ? null : <Text style={styles.cardTitle}>{title}</Text>}
 
          <Image
             style={{ width: 37, height: 32, position: 'absolute', bottom: 8, right: 5, zIndex: 10 }}
-            source={{ uri: imageURL }}
+            source={{
+               uri: whichStatement.whichIconPoke(pokeID),
+            }}
          />
          <Image
             style={{ position: 'absolute', bottom: 0, right: 0 }}
             source={require('../assets/images/card-poke-corner.png')}
          />
-      </View>
+      </TouchableOpacity>
    )
 }
 

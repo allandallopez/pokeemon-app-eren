@@ -8,17 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* pokemoonAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* pokemoonAppTests.m */; };
-		078F7B6CE873489DA160ADC9 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E33AEEA3447D4092B480C683 /* Rubik-Regular.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		25CF1F4756CB44DFA679C7E6 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8853BBF567BC49C68F05552E /* Poppins-Regular.ttf */; };
 		37207278808C490EA4FAB4BF /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72755423EB124C7D8F736B81 /* Poppins-MediumItalic.ttf */; };
-		3D7606964702437993DD2FB2 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85F23580E620493FA188610C /* Poppins-Thin.ttf */; };
-		4AF3572E87C44BDA974A1797 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F94AA1FDB843A0A18D7141 /* Poppins-ThinItalic.ttf */; };
-		568E3A9795A841F594590F85 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50399EDBCC6A4230B5693868 /* Rubik-Bold.ttf */; };
-		58334BFFE009426C88F0FF22 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3068221AFFC4FA39BD6F9AD /* Rubik-Medium.ttf */; };
-		5A017C7B5DF146F8AA600FF1 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D402A963B4B4FAEBE8B87 /* Rubik-Black.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8423E7670F5146ABB07F703C /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5349511AB274494891E72FB /* Poppins-Bold.ttf */; };
 		8B6579D88874AF9A830256FC /* libPods-pokemoonApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 609CE2E9D90176E0F52D7B74 /* libPods-pokemoonApp.a */; };
@@ -26,7 +20,6 @@
 		9ABFB705E37240678D328F11 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CB665836BB642ACA87885BF /* Poppins-Italic.ttf */; };
 		AA4CEC95D2474CC79C2FA6C4 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92B2D5CAD136483DBD433245 /* Poppins-BoldItalic.ttf */; };
 		BB00B63738DD6E3FF65AD718 /* libPods-pokemoonApp-pokemoonAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0DC8BDBE8E46E4D307D530 /* libPods-pokemoonApp-pokemoonAppTests.a */; };
-		E51E6EBE1C20460BB942EE36 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4C7D5B5DE4E477CA12D1D03 /* Rubik-Light.ttf */; };
 		F0A32E8DC38942A0BA8678D4 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3499E262F5A41C5AAE7F4E3 /* Poppins-Medium.ttf */; };
 /* End PBXBuildFile section */
 
@@ -50,25 +43,18 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = pokemoonApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = pokemoonApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = pokemoonApp/main.m; sourceTree = "<group>"; };
-		50399EDBCC6A4230B5693868 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Bold.ttf"; path = "../src/assets/fonts/Rubik-Bold.ttf"; sourceTree = "<group>"; };
-		5B8D402A963B4B4FAEBE8B87 /* Rubik-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Black.ttf"; path = "../src/assets/fonts/Rubik-Black.ttf"; sourceTree = "<group>"; };
 		609CE2E9D90176E0F52D7B74 /* libPods-pokemoonApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pokemoonApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72755423EB124C7D8F736B81 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-MediumItalic.ttf"; path = "../src/assets/fonts/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		78E71188AED818BB14AC1F08 /* Pods-pokemoonApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokemoonApp.release.xcconfig"; path = "Target Support Files/Pods-pokemoonApp/Pods-pokemoonApp.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = pokemoonApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		85F23580E620493FA188610C /* Poppins-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Thin.ttf"; path = "../src/assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		87AB28BA0A6CEAE4D7866565 /* Pods-pokemoonApp-pokemoonAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokemoonApp-pokemoonAppTests.release.xcconfig"; path = "Target Support Files/Pods-pokemoonApp-pokemoonAppTests/Pods-pokemoonApp-pokemoonAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		8853BBF567BC49C68F05552E /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		8B9CA5A735BC426AB088A834 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		8CB665836BB642ACA87885BF /* Poppins-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Italic.ttf"; path = "../src/assets/fonts/Poppins-Italic.ttf"; sourceTree = "<group>"; };
-		91F94AA1FDB843A0A18D7141 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ThinItalic.ttf"; path = "../src/assets/fonts/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
 		92B2D5CAD136483DBD433245 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BoldItalic.ttf"; path = "../src/assets/fonts/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		ADC53F64BE7C5ACA157AED83 /* Pods-pokemoonApp-pokemoonAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokemoonApp-pokemoonAppTests.debug.xcconfig"; path = "Target Support Files/Pods-pokemoonApp-pokemoonAppTests/Pods-pokemoonApp-pokemoonAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B3068221AFFC4FA39BD6F9AD /* Rubik-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Medium.ttf"; path = "../src/assets/fonts/Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		BF0DC8BDBE8E46E4D307D530 /* libPods-pokemoonApp-pokemoonAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pokemoonApp-pokemoonAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18271844C9835DF79620A0F /* Pods-pokemoonApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokemoonApp.debug.xcconfig"; path = "Target Support Files/Pods-pokemoonApp/Pods-pokemoonApp.debug.xcconfig"; sourceTree = "<group>"; };
-		C4C7D5B5DE4E477CA12D1D03 /* Rubik-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Light.ttf"; path = "../src/assets/fonts/Rubik-Light.ttf"; sourceTree = "<group>"; };
-		E33AEEA3447D4092B480C683 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Regular.ttf"; path = "../src/assets/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		E5349511AB274494891E72FB /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F3499E262F5A41C5AAE7F4E3 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
@@ -134,13 +120,6 @@
 				72755423EB124C7D8F736B81 /* Poppins-MediumItalic.ttf */,
 				8853BBF567BC49C68F05552E /* Poppins-Regular.ttf */,
 				8B9CA5A735BC426AB088A834 /* Poppins-SemiBold.ttf */,
-				85F23580E620493FA188610C /* Poppins-Thin.ttf */,
-				91F94AA1FDB843A0A18D7141 /* Poppins-ThinItalic.ttf */,
-				5B8D402A963B4B4FAEBE8B87 /* Rubik-Black.ttf */,
-				50399EDBCC6A4230B5693868 /* Rubik-Bold.ttf */,
-				C4C7D5B5DE4E477CA12D1D03 /* Rubik-Light.ttf */,
-				B3068221AFFC4FA39BD6F9AD /* Rubik-Medium.ttf */,
-				E33AEEA3447D4092B480C683 /* Rubik-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -301,13 +280,6 @@
 				37207278808C490EA4FAB4BF /* Poppins-MediumItalic.ttf in Resources */,
 				25CF1F4756CB44DFA679C7E6 /* Poppins-Regular.ttf in Resources */,
 				985D5220E4524383871204E6 /* Poppins-SemiBold.ttf in Resources */,
-				3D7606964702437993DD2FB2 /* Poppins-Thin.ttf in Resources */,
-				4AF3572E87C44BDA974A1797 /* Poppins-ThinItalic.ttf in Resources */,
-				5A017C7B5DF146F8AA600FF1 /* Rubik-Black.ttf in Resources */,
-				568E3A9795A841F594590F85 /* Rubik-Bold.ttf in Resources */,
-				E51E6EBE1C20460BB942EE36 /* Rubik-Light.ttf in Resources */,
-				58334BFFE009426C88F0FF22 /* Rubik-Medium.ttf in Resources */,
-				078F7B6CE873489DA160ADC9 /* Rubik-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

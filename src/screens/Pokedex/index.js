@@ -24,17 +24,25 @@ const Pokedex = ({ navigation }) => {
             </TouchableOpacity>
          </View>
 
-         <View style={{ paddingHorizontal: 18, marginTop: 46 }}>
+         <View style={{ paddingHorizontal: 18, marginTop: 46, flex: 1 }}>
             <FlatList
                numColumns={2}
+               showsVerticalScrollIndicator={false}
                columnWrapperStyle={{ justifyContent: 'space-between' }}
-               data={pokedexContext.pokedexList}
+               data={pokedexContext.pokedexList.items}
                showsHorizontalScrollIndicator={false}
                ItemSeparatorComponent={() => <View style={{ marginHorizontal: 11 }} />}
                renderItem={({ item, index }) => {
-                  return <CardPokeCorner pokeID={item.ID} title={item.title} imageURL={item.imageURL} />
+                  return (
+                     <CardPokeCorner
+                        onNavigate={() => navigation.navigate('DetailPokedex', { pokeID: index, pokeName: item.name })}
+                        pokeID={index}
+                        title={item.name}
+                        imageURL={item.imageURL}
+                     />
+                  )
                }}
-               keyExtractor={(item) => String(item.ID)}
+               keyExtractor={(item) => String(item.name)}
             />
          </View>
       </View>
