@@ -1,21 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react'
-import {
-   View,
-   Text,
-   StyleSheet,
-   TouchableOpacity,
-   Dimensions,
-   Image,
-   Animated,
-   SafeAreaView,
-   FlatList,
-} from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Image, Animated, SafeAreaView } from 'react-native'
 
 import { API } from '@services'
 
 import { BackIcon } from '@svgIcons'
 import { font, themes } from '@utils'
-import { Fragment } from 'react/cjs/react.production.min'
 
 const size = Dimensions.get('screen').width
 
@@ -30,7 +19,6 @@ const DetailItem = ({ route, navigation }) => {
 
    useEffect(() => {
       API.GetDetailItem(itemName).then((response) => {
-         console.log('debug:detail', response)
          setDetailItem((prevState) => ({
             ...prevState,
             data: response,
