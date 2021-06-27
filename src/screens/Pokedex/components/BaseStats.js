@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
 import { font } from '@utils'
@@ -6,38 +6,64 @@ import { font } from '@utils'
 const BaseStats = ({ detailPokedex }) => {
    return (
       <View style={styles.container}>
-         <Text style={styles.headerTitle}>Note : the scale is from 0 to 100</Text>
-
          {detailPokedex.isLoading ? null : (
-            <Fragment>
-               {detailPokedex.data?.stats.map((item) => (
-                  <View style={{ width: '100%', marginBottom: 25 }}>
-                     <Text style={{ ...styles.headerTitle, fontFamily: font.PoppinsBold, marginBottom: 10 }}>
-                        {item.stat.name.toUpperCase()}
-                     </Text>
+            <View style={{ marginTop: 10 }}>
+               {detailPokedex.data?.stats.map((item, index) => (
+                  <View
+                     key={index}
+                     style={{
+                        width: '100%',
+                        marginBottom: 10,
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                     }}>
+                     <View style={{ width: 90, flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <View style={{ width: 70 }}>
+                           <Text
+                              numberOfLines={1}
+                              ellipsizeMode="tail"
+                              style={{ ...styles.headerTitle, fontFamily: font.PoppinsMedium, marginBottom: 10 }}>
+                              {item.stat.name === 'special-attack'
+                                 ? item.stat.name.replace('special-attack', 'SPEC ATT')
+                                 : item.stat.name === 'special-defense'
+                                 ? item.stat.name.replace('special-defense', 'SPEC DEF')
+                                 : item.stat.name.toUpperCase()}
+                           </Text>
+                        </View>
 
+                        <Text style={{ ...styles.headerTitle, fontFamily: font.PoppinsBold, marginBottom: 10 }}>
+                           {item.base_stat}
+                        </Text>
+                     </View>
                      <View
                         style={{
-                           width: '100%',
+                           width: '70%',
                            height: 8,
                            borderRadius: 36,
                            backgroundColor: '#BDF5F1',
-                           marginBottom: 6,
                            overflow: 'hidden',
+                           marginTop: 5,
                         }}>
                         <View
                            style={{
                               width: `${(item.base_stat / 100) * 100}%`,
                               height: 8,
                               borderRadius: 36,
-                              backgroundColor: '#3498db',
+                              backgroundColor: item.base_stat < 50 ? '#e74c3c' : '#3498db',
                            }}
                         />
                      </View>
                   </View>
                ))}
-            </Fragment>
+            </View>
          )}
+
+         <View style={{ marginTop: 20 }}>
+            <Text style={{ ...styles.headerTitle, marginBottom: 5 }}>Note </Text>
+            <Text style={{ ...styles.headerTitle, fontFamily: font.PoppinsMedium, opacity: 0.5 }}>
+               The scale is from 0 to 100
+            </Text>
+         </View>
       </View>
    )
 }

@@ -1,16 +1,15 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-import { font } from '@utils'
+import { font, themes } from '@utils'
 import { HeightIcon, WeightIcon } from '@svgIcons'
 
 const About = ({ detailPokedex }) => {
    return (
       <View style={styles.container}>
          <Text style={styles.descTitle}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.{' '}
+            Pokémon is short for “Pocket Monsters", the original Japanese name. The franchise has its roots in a gaming
+            magazine in the early 1980s in Japan—Game Freak, started by Satoshi Tajiri and Ken Sugimori{' '}
          </Text>
 
          <View style={styles.bodyInfo}>
@@ -52,7 +51,7 @@ const styles = StyleSheet.create({
    bodyInfo: {
       width: '100%',
       height: 73,
-      backgroundColor: 'transparent',
+      backgroundColor: 'white',
       borderWidth: 1,
       borderColor: 'solid rgba(0, 0, 0, 0.1)',
       borderRadius: 10,
@@ -61,6 +60,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'space-between',
       marginTop: 29,
+      ...themes.shadow,
    },
 })
 

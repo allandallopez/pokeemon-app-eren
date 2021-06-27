@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native'
 
 import { font } from '@utils'
+import { isAndroid } from '@utils/deviceInfo'
 import { HomeBackground } from '@svgImages'
 
 const HomePage = ({ navigation }) => {
@@ -35,7 +36,9 @@ const HomePage = ({ navigation }) => {
                />
             </TouchableOpacity>
 
-            <TouchableOpacity style={{ ...styles.cardMenu, backgroundColor: '#3498DB' }}>
+            <TouchableOpacity
+               onPress={() => navigation.navigate('Items')}
+               style={{ ...styles.cardMenu, backgroundColor: '#3498DB' }}>
                <Image
                   source={require('@assets/images/lit-corner-poke.png')}
                   style={{ position: 'absolute', left: 0, top: 0 }}
@@ -80,7 +83,7 @@ const HomePage = ({ navigation }) => {
          </View>
          {/* =================== */}
 
-         <View style={{ position: 'absolute', bottom: 0 }}>
+         <View style={{ position: 'absolute', bottom: isAndroid ? Dimensions.get('screen').height / -10 : 0 }}>
             <HomeBackground />
          </View>
 

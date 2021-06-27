@@ -1,3 +1,5 @@
 export { default as Home } from './Home'
 export { default as Pokedex } from './Pokedex'
 export { default as DetailPokedex } from './Pokedex/DetailPokedex'
+export { default as Items } from './Items'
+export { default as DetailItem } from './Items/DetailItem'

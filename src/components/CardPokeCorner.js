@@ -1,21 +1,23 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 
-import { font, whichStatement } from '@utils'
+import { font, whichStatement, themes } from '@utils'
 
-const CardPokeCorner = ({ title, imageURL, type = 1, pokeID, onNavigate }) => {
+const CardPokeCorner = ({ title, type = 1, pokeID, onNavigate }) => {
    return (
       <TouchableOpacity
          onPress={onNavigate}
-         style={{ ...styles.cardPoke, backgroundColor: type !== 1 ? '#ffffff' : whichStatement.whichBgColor(pokeID) }}>
-         {type !== 1 ? null : <Text style={styles.cardTitle}>{title}</Text>}
+         style={{ ...styles.cardPoke, backgroundColor: type !== 1 ? '#FFFFFF' : whichStatement.whichBgColor(pokeID) }}>
+         <Text style={{ ...styles.cardTitle, color: type !== 1 ? '#000000' : '#ffffff' }}>{title}</Text>
 
-         <Image
-            style={{ width: 37, height: 32, position: 'absolute', bottom: 8, right: 5, zIndex: 10 }}
-            source={{
-               uri: whichStatement.whichIconPoke(pokeID),
-            }}
-         />
+         {type !== 1 ? null : (
+            <Image
+               style={{ width: 37, height: 32, position: 'absolute', bottom: 8, right: 5, zIndex: 10 }}
+               source={{
+                  uri: whichStatement.whichIconPoke(pokeID),
+               }}
+            />
+         )}
          <Image
             style={{ position: 'absolute', bottom: 0, right: 0 }}
             source={require('../assets/images/card-poke-corner.png')}
@@ -31,11 +33,12 @@ const styles = StyleSheet.create({
       borderRadius: 10,
       marginBottom: 15,
       paddingHorizontal: 24,
+
+      ...themes.shadow,
    },
    cardTitle: {
       marginTop: 30,
       fontFamily: font.PoppinsSemiBold,
-      color: '#ffffff',
       fontSize: 12,
    },
 })

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect, useState, Fragment } from 'react'
 import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Image, Animated, SafeAreaView } from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 
@@ -51,7 +51,6 @@ const DetailPokedex = ({ route, navigation }) => {
                               translateY: scroll.interpolate({
                                  inputRange: [-size, 0, size, size + 1],
                                  outputRange: [-size / 2, 0, size * 0.75, size * 0.75],
-                                 // easing: Easing.bounce(),
                               }),
                            },
                            {
@@ -68,7 +67,18 @@ const DetailPokedex = ({ route, navigation }) => {
                      <TouchableOpacity onPress={() => navigation.goBack()}>
                         <BackIcon color={'#ffffff'} />
                      </TouchableOpacity>
-                     <Text style={styles.headerPokeName}>{pokeName}</Text>
+                     <Text style={styles.headerPokeName}>{detailPokedex.data?.name}</Text>
+                     <View style={{ flexDirection: 'row' }}>
+                        {detailPokedex.isLoading ? null : (
+                           <Fragment>
+                              {detailPokedex.data.types.map((item) => (
+                                 <View style={styles.capsuleType}>
+                                    <Text style={styles.typeTitle}>{item.type.name}</Text>
+                                 </View>
+                              ))}
+                           </Fragment>
+                        )}
+                     </View>
 
                      <View
                         style={{
@@ -76,7 +86,6 @@ const DetailPokedex = ({ route, navigation }) => {
                            justifyContent: 'center',
                            alignItems: 'center',
                            marginBottom: 30,
-                           marginTop: 10,
                         }}>
                         <Image
                            style={{ width: 170, height: 170 }}
@@ -135,7 +144,7 @@ const styles = StyleSheet.create({
    },
    header: {
       paddingHorizontal: 18,
-      paddingTop: 48,
+      paddingTop: 28,
    },
    headerPokeName: {
       fontFamily: font.PoppinsBold,
@@ -153,6 +162,20 @@ const styles = StyleSheet.create({
       paddingVertical: 18,
       flex: 1,
       zIndex: 10,
+   },
+   capsuleType: {
+      width: 83,
+      height: 26,
+      backgroundColor: 'rgba(255, 255, 255, 0.35)',
+      borderRadius: 20,
+      marginRight: 5,
+      justifyContent: 'center',
+      alignItems: 'center',
+   },
+   typeTitle: {
+      fontFamily: font.PoppinsMedium,
+      fontSize: 12,
+      color: '#ffffff',
    },
 })
 
